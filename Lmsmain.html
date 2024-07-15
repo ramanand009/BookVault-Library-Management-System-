@@ -1,0 +1,316 @@
+
+   
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anurag University Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="er.css">
+</head>
+<body>
+
+    <header>
+        <h1>Anurag University BookVault</h1>
+        <!-- Cart icon and text -->
+        <div id="cart-container" onclick="toggleCartDetails()">
+            <i id="cart-icon" class="fas fa-shopping-cart"></i>
+            <span id="cart-text">Cart</span>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Contact Us</a>
+        
+    </nav>
+
+    <section>
+        <button id="get-book-btn" onclick="showBookDetails()">Get Your Book Now</button>
+
+        <div id="book-details" style="display: none;">
+            <h2>Book Details</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Price (INR)</th>
+                        <th>Availability</th>
+                        <th>Year of Study</th>
+                        <th>Add to Cart</th>
+                    </tr>
+                </thead>
+                <tbody id="book-items">
+                    <tr>
+                        <td>Fundamentals of Electrical Engineering</td>
+                        <td>Author 1</td>
+                        <td>200</td>
+                        <td>Yes</td>
+                        <td>1</td>
+                        <td><button onclick="addToCart('Fundamentals of Electrical Engineering', 'John Doe', 200, 'Yes', 1)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Introduction to Computer Science and Engineering</td>
+                        <td>Jane Smith</td>
+                        <td>300</td>
+                        <td>No</td>
+                        <td>4</td>
+                        <td><button onclick="addToCart('Introduction to Computer Science and Engineering', 'Jane Smith', 300, 'No', 4)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Mechanics of Materials: B.Tech Edition</td>
+                        <td>David Johnson</td>
+                        <td>100</td>
+                        <td>Yes</td>
+                        <td>3</td>
+                        <td><button onclick="addToCart('Mechanics of Materials: B.Tech Edition', 'David Johnson', 100, 'Yes', 3)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Digital Signal Processing: Principles and Applications</td>
+                        <td>Emily Brown</td>
+                        <td>250</td>
+                        <td>Yes</td>
+                        <td>2</td>
+                        <td><button onclick="addToCart('Digital Signal Processing: Principles and Applications', 'Emily Brown', 250, 'Yes', 2)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Data Structures and Algorithms for B.Tech Students</td>
+                        <td>Michael Lee</td>
+                        <td>400</td>
+                        <td>No</td>
+                        <td>1</td>
+                        <td><button onclick="addToCart('Data Structures and Algorithms for B.Tech Students', 'Michael Lee', 400, 'No', 1)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Fundamentals of Thermodynamics and Heat Transfer</td>
+                        <td>Sarah Anderson</td>
+                        <td>500</td>
+                        <td>Yes</td>
+                        <td>4</td>
+                        <td><button onclick="addToCart('Fundamentals of Thermodynamics and Heat Transfer', 'Sarah Anderson', 500, 'Yes', 4)">Add</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Engineering Mathematics: A Comprehensive Guide</td>
+                        <td>Robert Wilson</td>
+                        <td>200</td>
+                        <td>Yes</td>
+                        <td>4</td>
+                        <td><button onclick="addToCart('Engineering Mathematics: A Comprehensive Guide', 'Robert Wilson', 200, 'Yes', 4)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Introduction to Communication Systems</td>
+                        <td>Jennifer Taylor</td>
+                        <td>150</td>
+                        <td>Yes</td>
+                        <td>2</td>
+                        <td><button onclick="addToCart('Introduction to Communication Systems', 'Jennifer Taylor', 150, 'Yes', 2)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Principles of Environmental Engineering</td>
+                        <td>Daniel Clark</td>
+                        <td>350</td>
+                        <td>Yes</td>
+                        <td>3</td>
+                        <td><button onclick="addToCart('Principles of Environmental Engineering', 'Daniel Clark', 350, 'Yes', 3)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Software Engineering: Concepts and Practice</td>
+                        <td>Laura Garcia</td>
+                        <td>300</td>
+                        <td>No</td>
+                        <td>4</td>
+                        <td><button onclick="addToCart('Software Engineering: Concepts and Practice', 'Laura Garcia', 300, 'No', 4)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Fundamentals of Robotics and Automation</td>
+                        <td>Kevin Miller</td>
+                        <td>190</td>
+                        <td>Yes</td>
+                        <td>1</td>
+                        <td><button onclick="addToCart('Fundamentals of Robotics and Automation', 'Kevin Miller', 190, 'Yes', 1)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Database Management Systems: B.Tech Essentials</td>
+                        <td>Jessica Martinez</td>
+                        <td>220</td>
+                        <td>No</td>
+                        <td>3</td>
+                        <td><button onclick="addToCart('Database Management Systems: B.Tech Essentials', 'Jessica Martinez', 220, 'No', 3)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Fluid Mechanics and Hydraulic Machinery</td>
+                        <td>Mark Robinson</td>
+                        <td>330</td>
+                        <td>Yes</td>
+                        <td>2</td>
+                        <td><button onclick="addToCart('Fluid Mechanics and Hydraulic Machinery', 'Mark Robinson', 330, 'Yes', 2)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Introduction to Control Systems Engineering</td>
+                        <td>Amanda White</td>
+                        <td>430</td>
+                        <td>Yes</td>
+                        <td>3</td>
+                        <td><button onclick="addToCart('Introduction to Control Systems Engineering', 'Amanda White', 430, 'Yes', 3)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Materials Science and Engineering for B.Tech</td>
+                        <td>Christopher Harris</td>
+                        <td>260</td>
+                        <td>Yes</td>
+                        <td>1</td>
+                        <td><button onclick="addToCart('Materials Science and Engineering for B.Tech', 'Christopher Harris', 260, 'Yes', 1)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Computer Networks: Principles and Practice</td>
+                        <td>Samantha Jones</td>
+                        <td>370</td>
+                        <td>No</td>
+                        <td>2</td>
+                        <td><button onclick="addToCart('Computer Networks: Principles and Practice', 'Samantha Jones', 370, 'No', 2)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Introduction to VLSI Design and Technology</td>
+                        <td>Brian Thompson</td>
+                        <td>300</td>
+                        <td>No</td>
+                        <td>2</td>
+                        <td><button onclick="addToCart('Introduction to VLSI Design and Technology', 'Brian Thompson', 300, 'No', 2)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Renewable Energy Systems Engineering</td>
+                        <td>Patricia Davis</td>
+                        <td>300</td>
+                        <td>Yes</td>
+                        <td>3</td>
+                        <td><button onclick="addToCart('Renewable Energy Systems Engineering', 'Patricia Davis', 300, 'No', 4)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Structural Analysis and Design for B.Tech</td>
+                        <td>Timothy Green</td>
+                        <td>200</td>
+                        <td>Yes</td>
+                        <td>4</td>
+                        <td><button onclick="addToCart('Structural Analysis and Design for B.Tech', 'Timothy Green', 200, 'Yes', 4)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Artificial Intelligence and Machine Learning Basics</td>
+                        <td>Kimberly Wilson</td>
+                        <td>300</td>
+                        <td>Yes</td>
+                        <td>4</td>
+                        <td><button onclick="addToCart('Artificial Intelligence and Machine Learning Basics', 'Kimberly Wilson', 300, 'Yes', 4)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Fundamentals of Chemical Engineering</td>
+                        <td>Richard Taylor</td>
+                        <td>100</td>
+                        <td>Yes</td>
+                        <td>1</td>
+                        <td><button onclick="addToCart('Fundamentals of Chemical Engineering', 'Richard Taylor', 100, 'Yes', 1)">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Operating Systems: B.Tech Essentials</td>
+                        <td>Elizabeth Martinez</td>
+                        <td>240</td>
+                        <td>Yes</td>
+                        <td>3</td>
+                        <td><button onclick="addToCart('Operating Systems: B.Tech Essentials', 'Elizabeth Martinez', 240, 'Yes', 3)">Add</button></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <br>
+            
+        </div>
+		
+      
+        <div id="cart-details">
+<hr>
+		<a href="final.html"><button>Proceed to Next</button></a>
+            <h2>Your Cart</h2>
+            <table id="cart">
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Price (INR)</th>
+                        <th>Availability</th>
+                        <th>Year of Study</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items"></tbody>
+            </table>
+            <div id="total-price"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Anurag University Library. All rights reserved.</p>
+        <p>Contact: library@anuraguniversity.edu</p>
+    </footer>
+
+    <script>
+        function showBookDetails() {
+            const bookDetails = document.getElementById("book-details");
+            bookDetails.style.display = "block";
+        }
+
+        function addToCart(bookName, author, price, availability, yearOfStudy) {
+            const cartItems = document.getElementById("cart-items");
+            const newRow = document.createElement("tr");
+            newRow.innerHTML = `
+                <td>${bookName}</td>
+                <td>${author}</td>
+                <td>${price}</td>
+                <td>${availability}</td>
+                <td>${yearOfStudy}</td>
+                <td><button onclick="removeFromCart(this)">Remove</button></td>
+            `;
+            cartItems.appendChild(newRow);
+
+            // Update total price
+            updateTotalPrice();
+        }
+
+        function removeFromCart(button) {
+            const row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+
+            // Update total price
+            updateTotalPrice();
+        }
+
+        function toggleCartDetails() {
+            const cartDetails = document.getElementById("cart-details");
+            cartDetails.style.display = cartDetails.style.display === "none" ? "block" : "none";
+        }
+
+        function updateTotalPrice() {
+            const cartItems = document.getElementById("cart-items").getElementsByTagName("tr");
+            let totalPrice = 0;
+            let allAvailable = true;
+
+            for (let i = 0; i < cartItems.length; i++) {
+                const availability = cartItems[i].getElementsByTagName("td")[3].innerText;
+                if (availability.toLowerCase() === "yes") {
+                    const price = parseInt(cartItems[i].getElementsByTagName("td")[2].innerText);
+                    totalPrice += price;
+                } else {
+                    allAvailable = false;
+                }
+            }
+
+            if (allAvailable) {
+                document.getElementById("total-price").innerText = `Total Price: INR ${totalPrice}`;
+            } else {
+                document.getElementById("total-price").innerText = `Total Price: INR 0 (Some books are not available)`;
+            }
+        }
+    </script>
+    
+</body>
+</html>

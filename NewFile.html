@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anurag University Library</title>
+    <center>
+    <h3 style="color: white; font-size: 21px;">Anurag University BookVault</h3>
+    
+    </center>
+    <style>
+       html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://png.pngtree.com/background/20230424/original/pngtree-large-library-filled-with-books-picture-image_2458791.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffa500;
+        }
+
+        .login-container {
+    max-width: 400px;
+    margin: auto; 
+    padding: 20px;
+    background-image: url('https://www.niti.gov.in/sites/default/files/2023-03/library_1.jpg');
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    display: none; 
+}
+      .login-container1 {
+    max-width: 400px;
+    margin: auto; 
+    padding: 20px;
+    background-image: url('https://www.niti.gov.in/sites/default/files/2023-03/library_1.jpg');
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    display: none; 
+}  
+        
+		
+        .login-container h2 {
+        	color:white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .login-container1 h2 {
+        	color:white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-container1 form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-container form input[type="text"],
+        .login-container form input[type="password"],
+        .login-container form input[type="submit"] {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+        }
+
+        .login-container form input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .login-container form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .login-container1 form input[type="text"],
+        .login-container1 form input[type="password"],
+        .login-container1 form input[type="submit"] {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+        }
+
+        .login-container1 form input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .login-container1 form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+
+        #loginBtn {
+            position: absolute;
+            bottom: 30px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        #loginBtn1 {
+            position: absolute;
+            bottom: 100px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+
+        #loginBtn:hover {
+            background-color: #0056b3;
+        }
+        .quote-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 200px;
+}
+
+.quote-box {
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.quote-text {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    line-height: 1.5;
+}
+.success-message {
+            color: white;
+             /* Background color for contrast */
+            padding: 10px;
+        }
+
+ .gg{
+ 	box-shadow:10px 7px 20px orange;
+ }       
+    </style>
+</head>
+<body>
+    <header>
+    <div class="gg">
+        <img src="https://www.careerguide.com/career/wp-content/uploads/2023/07/Anurag-University-1.png" alt="Anurag University Library">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="NewFile.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+    <div class="login-container" id="loginForm">
+        <h2 style="color: white;">Login to Anurag University BookVault</h2>
+        <form action="KK.jsp" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <br><hr>
+            <input type="submit" value="Student Login">
+            
+        </form>
+        
+        
+        
+    </div>
+	<div class="login-container1" id="loginForm1">
+        <h2 style="color: white;">Login to Anurag University BookVault</h2>
+        <form action="adc.jsp" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <br><hr>
+            <input type="submit" value="Admin Login">
+            
+        </form> 
+    </div>
+    
+    
+    
+    
+
+    
+
+    <a href="#" id="loginBtn">Student Login</a>
+    <br>
+    <a href="#" id="loginBtn1">Admin Login</a>
+
+    <script>
+        
+        const loginBtn = document.getElementById('loginBtn');
+        const loginForm = document.getElementById('loginForm');
+
+        loginBtn.addEventListener('click', function() {
+           
+            if (loginForm.style.display === 'none') {
+                loginForm.style.display = 'block';
+            } else {
+                loginForm.style.display = 'none';
+            }
+        })
+        const loginBtn1 = document.getElementById('loginBtn1');
+        const loginForm1 = document.getElementById('loginForm1');
+
+        loginBtn1.addEventListener('click', function() {
+           
+            if (loginForm1.style.display === 'none') {
+                loginForm1.style.display = 'block';
+            } else {
+                loginForm1.style.display = 'none';
+            }
+        });
+       
+
+        
+        
+    </script>
+</body>
+</html>

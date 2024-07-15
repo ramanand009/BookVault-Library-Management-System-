@@ -1,0 +1,120 @@
+@charset "UTF-8";
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #83FF33, #8A2BE2);
+}
+
+header {
+    background-color: #83FF33;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+}
+
+
+nav {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #fff, #fff);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+#get-book-btn {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#get-book-btn:hover {
+    background-color: #45a049;
+}
+
+#book-details {
+    display: none;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+#cart-details {
+    display: none;
+    margin-top: 20px;
+}
+
+#cart {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#cart th, #cart td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#cart th {
+    background-color: #333;
+    color: #fff;
+}
+
+#total-price {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
